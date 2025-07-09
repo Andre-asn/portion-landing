@@ -27,3 +27,6 @@ This repository will contain the marketing landing page for Portion, including:
 - [ ] Feature showcase with screenshots
 - [ ] Customer testimonials
 - [ ] Support and FAQ sections
+
+Registering with Phone Numbers:
+Opt-in happens during login/signup — user submits their phone number and taps a "Send Code" button to receive an SMS verification code.
