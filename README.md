@@ -1,32 +1,69 @@
-# Portion Landing Page 🌐
+# React + TypeScript + Vite
 
-**Marketing website and landing page for the Portion mobile app**
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Split bills effortlessly, Share moments endlessly
+Currently, two official plugins are available:
 
-## 📱 About Portion
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-Portion is a mobile app that makes splitting bills with friends simple and seamless. Scan receipts, add your buddies, and let Portion handle the math.
+## Expanding the ESLint configuration
 
-**Main App**: Flutter mobile application (separate repository)
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-## 🎯 This Repository
+```js
+export default tseslint.config([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-This repository will contain the marketing landing page for Portion, including:
+      // Remove tseslint.configs.recommended and replace with this
+      ...tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      ...tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      ...tseslint.configs.stylisticTypeChecked,
 
-- **Product Overview** - Features and benefits
-- **Download Links** - App Store and Google Play
-- **Screenshots** - App preview and demos
-- **Pricing** - Subscription tiers (if applicable)
-- **Support** - Help documentation and contact
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
 
-## 🚀 Planned Features
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-- [ ] Responsive landing page design
-- [ ] App store download buttons
-- [ ] Feature showcase with screenshots
-- [ ] Customer testimonials
-- [ ] Support and FAQ sections
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-Registering with Phone Numbers:
-Opt-in happens during login/signup — user submits their phone number and taps a "Send Code" button to receive an SMS verification code.
+export default tseslint.config([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```

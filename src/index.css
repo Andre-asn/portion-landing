@@ -1,0 +1,321 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #006D77;
+  --color-secondary: #83C5BE;
+  --color-accent: #FFDDD2;
+  --color-background: #EDF6F9;
+  --color-surface: #FFFFFF;
+  --color-text-primary: #006D77;
+  --color-text-secondary: #4F4F4F;
+  --color-text-tertiary: #83C5BE;
+  --color-border: #83C5BE;
+  --color-error: #E29578;
+  --color-success: #10B981;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced scroll animations */
+.animate-fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.animate-fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-fade-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.8s ease-out;
+}
+
+.animate-fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animate-fade-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.8s ease-out;
+}
+
+.animate-fade-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animate-scale-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.8s ease-out;
+}
+
+.animate-scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Staggered animations */
+.animate-stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.animate-stagger.visible > *:nth-child(1) { transition-delay: 0ms; }
+.animate-stagger.visible > *:nth-child(2) { transition-delay: 100ms; }
+.animate-stagger.visible > *:nth-child(3) { transition-delay: 200ms; }
+.animate-stagger.visible > *:nth-child(4) { transition-delay: 300ms; }
+.animate-stagger.visible > *:nth-child(5) { transition-delay: 400ms; }
+.animate-stagger.visible > *:nth-child(6) { transition-delay: 500ms; }
+
+.animate-stagger.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* SVG Animation Classes */
+.animate-slide-in-up {
+  animation: slideInUp 1s ease-out 0.5s both;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 1s ease-out 0.3s both;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 1s ease-out 0.3s both;
+}
+
+.animate-slide-in-left-delayed {
+  animation: slideInLeft 1s ease-out 0.8s both;
+}
+
+.animate-slide-in-right-delayed {
+  animation: slideInRight 1s ease-out 1s both;
+}
+
+.animate-scale-in-delayed {
+  animation: scaleIn 0.8s ease-out 1.2s both;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Keyframes for SVG animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fade-in-scale {
+  animation: fadeInScale 1.2s ease-out 1.4s both;
+}
+
+.animate-gentle-sway {
+  animation: gentleSway 3s ease-in-out infinite;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes gentleSway {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-3px) rotate(1deg);
+  }
+}
+
+/* Animation delay classes */
+.animate-fade-in-delay-1 {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 0.2s forwards;
+}
+
+.animate-fade-in-delay-2 {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 0.4s forwards;
+}
+
+.animate-fade-in-delay-3 {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 0.6s forwards;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(131, 197, 190, 0.4);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 10px rgba(131, 197, 190, 0);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulseGlow 3s infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* Animation delay classes */
+.animate-fade-in-delay-1 {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 0.2s forwards;
+}
+
+.animate-fade-in-delay-2 {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 0.4s forwards;
+}
+
+.animate-fade-in-delay-3 {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 0.6s forwards;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(131, 197, 190, 0.4);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 10px rgba(131, 197, 190, 0);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulseGlow 3s infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
