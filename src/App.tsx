@@ -56,6 +56,7 @@ const Header = () => {
           <ul className="hidden md:flex gap-8">
             <li><a href="#features" className="text-primary hover:text-secondary transition-colors font-medium">Features</a></li>
             <li><a href="#how-it-works" className="text-primary hover:text-secondary transition-colors font-medium">How It Works</a></li>
+            <li><a href="/blog" className="text-primary hover:text-secondary transition-colors font-medium">Blog</a></li>
           </ul>
 
           {/* Mobile Menu Button */}
@@ -73,6 +74,7 @@ const Header = () => {
             <ul className="flex flex-col gap-4">
               <li><a href="#features" className="text-primary hover:text-secondary transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>Features</a></li>
               <li><a href="#how-it-works" className="text-primary hover:text-secondary transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>How It Works</a></li>
+              <li><a href="/blog" className="text-primary hover:text-secondary transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>Blog</a></li>
             </ul>
           </div>
         )}
@@ -121,10 +123,20 @@ const Hero = () => {
             <p className="text-xl md:text-2xl text-text-secondary mb-8 font-light animate-fade-in-delay-1">
               Split bills effortlessly, Share moments endlessly
             </p>
-            <p className="text-lg text-text-secondary max-w-2xl lg:max-w-none mb-12 leading-relaxed animate-fade-in-delay-2">
+            <p className="text-lg text-text-secondary max-w-2xl lg:max-w-none mb-8 leading-relaxed animate-fade-in-delay-2">
               The easiest way to split restaurant bills with friends. Take a photo of your receipt, 
               invite your friends, and let everyone claim their items. No more awkward math or payment confusion.
             </p>
+
+            <div className="mb-12 animate-fade-in-delay-2">
+              <a
+                href="/blog"
+                className="inline-flex items-center gap-2 bg-primary/10 text-primary px-6 py-3 rounded-full font-medium hover:bg-primary/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              >
+                📝 Check out our new development blog
+                <span>→</span>
+              </a>
+            </div>
             
             <div className="animate-fade-in-delay-3">
               <div className="inline-flex items-center gap-3 bg-accent/80 border-2 border-secondary text-primary px-8 py-4 rounded-full text-lg font-semibold mb-8 animate-pulse-slow">
