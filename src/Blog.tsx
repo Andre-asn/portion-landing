@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Calendar, CaretDown, CaretUp } from 'phosphor-react'
+import { Calendar, CaretDown } from 'phosphor-react'
 
 // Blog post data type
 interface BlogPost {
