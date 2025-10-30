@@ -10,9 +10,9 @@ const Navigation = () => {
 	    <div className="flex items-center justify-between max-w-[1200px] mx-auto h-16 px-8">
 	      <span className="logo-p" style={{ fontSize: '24px' }}>P</span>
 	      
-	      <Link to="/blog" className="text-[#ede7e3] text-[15px] leading-[1em] tracking-[-0.01em]">
-	        Blog
-	      </Link>
+	        <Link to="/blog" className="hidden md:inline-block text-[#ede7e3] text-[15px] leading-[1em] tracking-[-0.01em]">
+                Blog
+            </Link>
 
 	      <button 
 	        className="md:hidden text-[#ede7e3]"
@@ -84,21 +84,21 @@ const Hero = () => {
 	          return (
 	            <div className="relative inline-block">
 	              {/* Top-left SVG (mirrored) */}
-	              <div className="absolute pointer-events-none" style={{ top: '-100px', left: '-100px' }}>
+	              <div className="hidden lg:block absolute pointer-events-none" style={{ top: '-100px', left: '-100px' }}>
 	                <svg xmlns="http://www.w3.org/2000/svg" width="140" height="143" fill="none" style={{ transform: 'scaleX(-1) rotate(30deg)' }}>
 	                  <path d="M 2.682 47.102 C 6.188 55.533 13.384 74.817 14.123 84.51 M 93.775 2.678 C 85.775 26.263 68.253 76.519 62.171 88.862 M 112.568 111.508 C 127.119 95.424 159.092 61.82 170.565 56.074 M 137.669 150.355 C 149.514 147.171 178.122 140.202 197.788 137.796 M 135.299 189.381 C 141.147 190.144 155.439 193.681 165.824 201.728" fill="none" strokeWidth="5" stroke="#16697a" strokeLinecap="round" strokeMiterlimit="10" />
 	                </svg>
 	              </div>
 	              {/* Top-right SVG */}
-	              <div className="absolute pointer-events-none" style={{ top: '-100px', right: '-100px' }}>
+	              <div className="hidden lg:block absolute pointer-events-none" style={{ top: '-100px', right: '-100px' }}>
 	                <svg xmlns="http://www.w3.org/2000/svg" width="140" height="143" fill="none" style={{ transform: 'rotate(30deg)' }}>
 	                  <path d="M 2.682 47.102 C 6.188 55.533 13.384 74.817 14.123 84.51 M 93.775 2.678 C 85.775 26.263 68.253 76.519 62.171 88.862 M 112.568 111.508 C 127.119 95.424 159.092 61.82 170.565 56.074 M 137.669 150.355 C 149.514 147.171 178.122 140.202 197.788 137.796 M 135.299 189.381 C 141.147 190.144 155.439 193.681 165.824 201.728" fill="none" strokeWidth="5" stroke="#16697a" strokeLinecap="round" strokeMiterlimit="10" />
 	                </svg>
 	              </div>
 	              <h1
 	                ref={titleRef}
-	                className="text-6xl lg:text-7xl font-bold uppercase mb-6 font-portion"
-	                style={{ color: '#16697a', letterSpacing: '-0.02em', whiteSpace: 'nowrap' }}
+	                className="text-5xl lg:text-7xl font-bold uppercase mb-6 font-portion"
+                    style={{ color: '#16697a', letterSpacing: '-0.02em' }}
 	              >
 	                {chars.map((ch, i) => (
 	                  <span
@@ -151,10 +151,10 @@ const Hero = () => {
 	          const words = 'Settle up in seconds.'.split(' ')
 	          const baseDelay = 0.8
 	          return (
-	        <h2
-	              ref={subRef}
-	              className="text-3xl lg:text-4xl font-bold mb-8"
-	          style={{ color: '#489FB5', perspective: '800px', whiteSpace: 'nowrap' }}
+	            <h2
+	                ref={subRef}
+	                className="text-2xl lg:text-3xl font-bold mb-8"
+                    style={{ color: '#489FB5', perspective: '800px' }}
 	            >
 	              {words.map((w, i) => (
 	                <span key={i} style={{ display: 'inline-block', marginRight: i < words.length - 1 ? '0.2em' : 0 }}>
@@ -239,14 +239,10 @@ const Hero = () => {
 	        }}
 	      />
 
-	      <div className="relative h-[280px] md:h-[500px] lg:h-[700px]">
-	        {/* Mobile: static screenshot instead of ticker */}
-	        <div className="flex md:hidden w-full h-full overflow-hidden rounded-3xl items-center justify-center bg-white">
-	        	<img src={screenshots[0]} alt="App screenshot" className="max-h-full max-w-full object-contain" />
-	        </div>
+	      <div className="relative h-[700px] md:h-[500px] lg:h-[700px]">
 	        {/* Desktop: marquee ticker */}
 	        <div
-	            className="hidden md:block relative w-full h-full overflow-hidden rounded-3xl ticker-mask"
+	            className="relative w-full h-full overflow-hidden rounded-3xl ticker-mask"
             style={{
             WebkitMaskImage:
                 'linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 12.5%, rgba(0,0,0,1) 87.5%, rgba(0,0,0,0) 100%)',
