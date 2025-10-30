@@ -678,11 +678,11 @@ const TechStackSection = () => {
 					</div>
 				</div>
 				{/* Slide-in wrappers so rotation on images stays intact; animate only when in view */}
-				<div className={`absolute pointer-events-none select-none hidden sm:block ${armsVisible ? 'arm-slide-left' : ''}`} style={{ top: '50%', left: '0%', transform: armsVisible ? 'translate(0, -50%)' : 'translate(-16px, -50%)', zIndex: 11, opacity: armsVisible ? 1 : 0 }}>
-					<img src="/finger_pointing.png" alt="Pointer left" style={{ height: '900px', transform: 'translateY(-9%) rotate(-70deg) scaleY(-1)' }} />
+				<div className={`absolute pointer-events-none select-none hidden sm:block ${armsVisible ? 'arm-slide-left' : ''}`} style={{ top: '50%', left: '0%', zIndex: 11, opacity: armsVisible ? 1 : 0, transform: armsVisible ? 'translate(-220px, -50%)' : 'translate(-16px, -50%)', ['--armX' as any]: '-220px' }}>
+					<img src="/finger_pointing.png" alt="Pointer left" style={{ height: '820px', transform: 'translateY(-9%) rotate(-70deg) scaleY(-1)' }} />
 				</div>
-				<div className={`absolute pointer-events-none select-none hidden sm:block ${armsVisible ? 'arm-slide-right' : ''}`} style={{ top: '50%', right: '0%', transform: armsVisible ? 'translate(0, -50%)' : 'translate(16px, -50%)', zIndex: 11, opacity: armsVisible ? 1 : 0 }}>
-					<img src="/finger_pointing.png" alt="Pointer right" style={{ height: '900px', transform: 'translateY(-9%) rotate(-110deg)' }} />
+				<div className={`absolute pointer-events-none select-none hidden sm:block ${armsVisible ? 'arm-slide-right' : ''}`} style={{ top: '50%', right: '0%', zIndex: 11, opacity: armsVisible ? 1 : 0, transform: armsVisible ? 'translate(220px, -50%)' : 'translate(16px, -50%)', ['--armX' as any]: '220px' }}>
+					<img src="/finger_pointing.png" alt="Pointer right" style={{ height: '820px', transform: 'translateY(-9%) rotate(-110deg)' }} />
 				</div>
 			</div>
 			<style>{`
