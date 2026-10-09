@@ -1,0 +1,443 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-09T00:00:00Z",
+  "title": "Design System: Portion",
+  "extensions": {
+    "colorMeta": {
+      "table": {
+        "role": "neutral",
+        "displayName": "Table",
+        "canonical": "#e3f0f2",
+        "tonalRamp": [
+          "#0f2a2f",
+          "#1f454c",
+          "#3a6a72",
+          "#5f9199",
+          "#8db7be",
+          "#bcd8dc",
+          "#e3f0f2",
+          "#f3f9fa"
+        ]
+      },
+      "ink": {
+        "role": "primary",
+        "displayName": "Teal Ink",
+        "canonical": "#16697a",
+        "tonalRamp": [
+          "#062a31",
+          "#0c4550",
+          "#16697a",
+          "#2a8597",
+          "#55a5b4",
+          "#8ec5cf",
+          "#c4e2e7",
+          "#eaf5f7"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#26262b",
+          "#4a4a52",
+          "#76767f",
+          "#a2a2ab",
+          "#c9c9d0",
+          "#e6e6ea",
+          "#f6f6f8",
+          "#ffffff"
+        ]
+      },
+      "graphite": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "#19191e",
+        "tonalRamp": [
+          "#0f0f12",
+          "#19191e",
+          "#2e2e35",
+          "#45454e",
+          "#62626c",
+          "#8a8a94",
+          "#b9b9c1",
+          "#e6e6ea"
+        ]
+      },
+      "slate": {
+        "role": "neutral",
+        "displayName": "Slate",
+        "canonical": "#55555f",
+        "tonalRamp": [
+          "#1f1f24",
+          "#34343b",
+          "#55555f",
+          "#6f6f79",
+          "#8c8c95",
+          "#adadb5",
+          "#d0d0d6",
+          "#eeeef1"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Rule",
+        "canonical": "#dedee4",
+        "tonalRamp": [
+          "#2b2b31",
+          "#4b4b54",
+          "#70707a",
+          "#9898a2",
+          "#bdbdc5",
+          "#dedee4",
+          "#eaeaee",
+          "#f6f6f8"
+        ]
+      },
+      "tray": {
+        "role": "neutral",
+        "displayName": "Tray",
+        "canonical": "#eaeaee",
+        "tonalRamp": [
+          "#2c2c30",
+          "#4d4d53",
+          "#727279",
+          "#9a9aa0",
+          "#c1c1c6",
+          "#dedee4",
+          "#eaeaee",
+          "#f7f7f9"
+        ]
+      },
+      "tangerine": {
+        "role": "primary",
+        "displayName": "Tangerine",
+        "canonical": "#ff7733",
+        "tonalRamp": [
+          "#3d1503",
+          "#6e2a08",
+          "#bf4810",
+          "#e85d1a",
+          "#ff7733",
+          "#ffa679",
+          "#ffd3bb",
+          "#fff4ec"
+        ]
+      },
+      "tangerine-press": {
+        "role": "primary",
+        "displayName": "Tangerine Press",
+        "canonical": "#e85d1a"
+      },
+      "tangerine-text": {
+        "role": "primary",
+        "displayName": "Tangerine Text",
+        "canonical": "#bf4810"
+      },
+      "tangerine-soft": {
+        "role": "primary",
+        "displayName": "Tangerine Soft",
+        "canonical": "#fff4ec"
+      },
+      "on-tangerine": {
+        "role": "neutral",
+        "displayName": "On Tangerine",
+        "canonical": "#0f0f12"
+      },
+      "chip-priya": {
+        "role": "secondary",
+        "displayName": "Priya Periwinkle",
+        "canonical": "#dfe6fb",
+        "tonalRamp": [
+          "#14204a",
+          "#2f4aa8",
+          "#4f6bc8",
+          "#7c93dc",
+          "#a9b9ec",
+          "#dfe6fb",
+          "#eef2fd",
+          "#f8f9fe"
+        ]
+      },
+      "chip-priya-text": {
+        "role": "secondary",
+        "displayName": "Priya Ink",
+        "canonical": "#2f4aa8"
+      },
+      "chip-marcus": {
+        "role": "secondary",
+        "displayName": "Marcus Lavender",
+        "canonical": "#ebe3fb",
+        "tonalRamp": [
+          "#2a1a52",
+          "#5b3fa3",
+          "#7a5fc2",
+          "#9d86d6",
+          "#c3b3ea",
+          "#ebe3fb",
+          "#f4effd",
+          "#fbf9fe"
+        ]
+      },
+      "chip-marcus-text": {
+        "role": "secondary",
+        "displayName": "Marcus Ink",
+        "canonical": "#5b3fa3"
+      },
+      "chip-lena": {
+        "role": "secondary",
+        "displayName": "Lena Mint",
+        "canonical": "#d6f1ee",
+        "tonalRamp": [
+          "#08332f",
+          "#126b62",
+          "#2a8c82",
+          "#5aaea5",
+          "#98d2cb",
+          "#d6f1ee",
+          "#eaf8f6",
+          "#f6fcfb"
+        ]
+      },
+      "chip-lena-text": {
+        "role": "secondary",
+        "displayName": "Lena Ink",
+        "canonical": "#126b62"
+      }
+    },
+    "typographyMeta": {
+      "wordmark": {
+        "displayName": "Wordmark",
+        "purpose": "PORTION heading the receipt only; 60px mobile, 68px from 640px. PortionTitle (good-doce)."
+      },
+      "display": {
+        "displayName": "Display",
+        "purpose": "Section headlines on the table in teal ink; 40px mobile, 56px from 768px; 13-16ch."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Hero promise beside the receipt; 34px mobile, 40px from 768px; max 13ch."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Step titles on slips; 26px mobile, 30px from 768px."
+      },
+      "body-lg": {
+        "displayName": "Body large",
+        "purpose": "Lede paragraphs on the table, slate, 32-46ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Slip copy, slate, max 40ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Buttons, nav links, names next to chips."
+      },
+      "ledger": {
+        "displayName": "Ledger",
+        "purpose": "Receipt items and prices in tabular mono; 13px inside stubs."
+      },
+      "ledger-total": {
+        "displayName": "Ledger total",
+        "purpose": "TOTAL and share amounts; 20-24px on stubs."
+      },
+      "ledger-meta": {
+        "displayName": "Ledger meta",
+        "purpose": "Printed table metadata on the paper (SAMPLE TABLE / FRIDAY LUNCH), uppercase, tracked."
+      }
+    },
+    "shadows": [
+      {
+        "name": "receipt",
+        "value": "drop-shadow(0 2px 3px rgb(15 15 31 / 0.08)) drop-shadow(0 22px 28px rgb(22 105 122 / 0.18))",
+        "purpose": "filter on the hero receipt wrapper so the shadow follows the zigzag mask."
+      },
+      {
+        "name": "slip",
+        "value": "drop-shadow(0 2px 3px rgb(15 15 31 / 0.08)) drop-shadow(0 16px 22px rgb(22 105 122 / 0.16))",
+        "purpose": "filter on stubs, the receipt tail, step slips and the latest-post slip."
+      },
+      {
+        "name": "tag",
+        "value": "0 1px 2px rgb(15 15 31 / 0.06), 0 8px 20px -8px rgb(22 105 122 / 0.25)",
+        "purpose": "box-shadow on claim tags."
+      },
+      {
+        "name": "device",
+        "value": "0 2px 6px rgb(15 15 31 / 0.1), 0 30px 60px -18px rgb(22 105 122 / 0.4)",
+        "purpose": "box-shadow on the phone frame around app screens."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-strong",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "The only easing curve: entrances, presses, slip shifts, chip pops."
+      },
+      {
+        "name": "press",
+        "value": "160ms",
+        "purpose": "Button and row press scale (0.97 buttons, 0.985 rows, 0.99 post slip)."
+      },
+      {
+        "name": "state",
+        "value": "200ms",
+        "purpose": "Row tint, arrow nudge, step title color."
+      },
+      {
+        "name": "slip-shift",
+        "value": "300ms",
+        "purpose": "Active step slip translate and rotate."
+      },
+      {
+        "name": "entrance",
+        "value": "300-700ms",
+        "purpose": "Claim tags 0.3s, chips 0.32s, hero copy 0.5s, receipt 0.7s."
+      },
+      {
+        "name": "reduced",
+        "value": "1ms",
+        "purpose": "prefers-reduced-motion collapses transitions; final claimed state and static stubs are shown."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Status Pill",
+      "kind": "chip",
+      "refersTo": "status-pill",
+      "description": "The Coming soon status on the receipt foot; a status, not a link.",
+      "html": "<span class=\"ds-status-pill\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 256 256\" aria-hidden=\"true\"><circle cx=\"128\" cy=\"128\" r=\"96\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"24\"/><polyline points=\"128 72 128 128 184 128\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"24\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Coming soon</span>",
+      "css": ".ds-status-pill { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 52px; padding: 0 22px; border-radius: 999px; background: var(--color-tangerine, #ff7733); color: var(--color-on-tangerine, #0f0f12); font-family: 'Inter Variable', Inter, system-ui, sans-serif; font-weight: 600; font-size: 16px; white-space: nowrap; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Pill link to the dev blog with a sliding arrow.",
+      "html": "<a href=\"#\" class=\"ds-btn-secondary\">Read the dev blog<svg class=\"ds-btn-arrow\" width=\"16\" height=\"16\" viewBox=\"0 0 256 256\" aria-hidden=\"true\"><line x1=\"40\" y1=\"128\" x2=\"216\" y2=\"128\" stroke=\"currentColor\" stroke-width=\"24\" stroke-linecap=\"round\"/><polyline points=\"144 56 216 128 144 200\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"24\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 52px; padding: 0 22px; border-radius: 999px; background: #eaeaee; color: var(--color-ink, #16697a); font-family: 'Inter Variable', Inter, system-ui, sans-serif; font-weight: 600; font-size: 16px; text-decoration: none; white-space: nowrap; transition: background-color 160ms ease, transform 160ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-btn-arrow { transition: transform 200ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-btn-secondary:hover { background: #dedee4; } .ds-btn-secondary:hover .ds-btn-arrow { transform: translateX(3px); } .ds-btn-secondary:active { transform: scale(0.97); } .ds-btn-secondary:focus-visible { outline: 3px solid #ff7733; outline-offset: 3px; }"
+    },
+    {
+      "name": "Nav Link",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Ink text link whose underline turns tangerine on hover.",
+      "html": "<nav class=\"ds-nav\"><span class=\"ds-nav-p\">P</span><a href=\"#\" class=\"ds-nav-link\">Dev Blog</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; height: 64px; padding: 0 32px; background: rgb(227 240 242 / 0.95); } .ds-nav-p { font-family: 'Spicy Rice', cursive; font-size: 28px; line-height: 1; color: #16697a; } .ds-nav-link { color: #16697a; font-family: 'Inter Variable', Inter, system-ui, sans-serif; font-weight: 600; font-size: 15px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 6px; text-decoration-thickness: 2px; transition: text-decoration-color 160ms ease; } .ds-nav-link:hover { text-decoration-color: #ff7733; } .ds-nav-link:focus-visible { outline: 3px solid #ff7733; outline-offset: 3px; border-radius: 8px; }"
+    },
+    {
+      "name": "Avatar Chip",
+      "kind": "chip",
+      "refersTo": "avatar-chip",
+      "description": "Initials chip identifying a person; tangerine for you, pastel pairs for friends, dashed circle for unclaimed.",
+      "html": "<span class=\"ds-chips\"><span class=\"ds-chip ds-chip-you\">AS</span><span class=\"ds-chip ds-chip-priya\">PK</span><span class=\"ds-chip ds-chip-marcus\">MR</span><span class=\"ds-chip ds-chip-lena\">LO</span><span class=\"ds-chip ds-chip-open\"></span></span>",
+      "css": ".ds-chips { display: inline-flex; gap: 4px; } .ds-chip { display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 999px; font-family: 'Inter Variable', Inter, system-ui, sans-serif; font-weight: 600; font-size: 11px; box-sizing: border-box; } .ds-chip-you { background: #ff7733; color: #0f0f12; } .ds-chip-priya { background: #dfe6fb; color: #2f4aa8; } .ds-chip-marcus { background: #ebe3fb; color: #5b3fa3; } .ds-chip-lena { background: #d6f1ee; color: #126b62; } .ds-chip-open { background: #ffffff; border: 2px dashed #dedee4; }"
+    },
+    {
+      "name": "Receipt Row",
+      "kind": "custom",
+      "refersTo": "receipt-row",
+      "description": "Claimable line item in mono with tabular price and chip slots; tangerine-soft when it is yours.",
+      "html": "<div class=\"ds-paper\"><button class=\"ds-row\" data-mine><span class=\"ds-row-name\">Chicken burrito</span><span class=\"ds-row-amt\">13.50</span><span class=\"ds-chip-you-s\">AS</span></button><button class=\"ds-row\"><span class=\"ds-row-name\">Carnitas bowl<small>1 × 14.00</small></span><span class=\"ds-row-amt\">14.00</span><span class=\"ds-chip-open-s\"></span></button></div>",
+      "css": ".ds-paper { background: #ffffff; padding: 16px; width: 360px; } .ds-row { display: flex; align-items: center; gap: 12px; width: 100%; padding: 8px 12px; border: 0; border-radius: 8px; background: transparent; text-align: left; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 15px; color: #19191e; cursor: pointer; transition: background-color 200ms ease, transform 160ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-row[data-mine] { background: #fff4ec; } .ds-row:not([data-mine]):hover { background: #f4f4f7; } .ds-row:active { transform: scale(0.985); } .ds-row:focus-visible { outline: 3px solid #ff7733; outline-offset: 3px; } .ds-row-name { flex: 1; } .ds-row-name small { display: block; font-size: 12px; color: #55555f; } .ds-row-amt { font-variant-numeric: tabular-nums; } .ds-chip-you-s, .ds-chip-open-s { display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 999px; box-sizing: border-box; font-family: 'Inter Variable', Inter, sans-serif; font-weight: 600; font-size: 11px; } .ds-chip-you-s { background: #ff7733; color: #0f0f12; } .ds-chip-open-s { border: 2px dashed #dedee4; }"
+    },
+    {
+      "name": "Torn Slip",
+      "kind": "card",
+      "refersTo": "step-slip",
+      "description": "The world's container: white paper with zigzag torn top and bottom, shadow on the wrapper.",
+      "html": "<div class=\"ds-slip-shadow\"><div class=\"ds-slip\"><h3>Snap the receipt.</h3><p>Point your camera at the bill. Portion reads every item, price and quantity.</p></div></div>",
+      "css": ".ds-slip-shadow { filter: drop-shadow(0 2px 3px rgb(15 15 31 / 0.08)) drop-shadow(0 16px 22px rgb(22 105 122 / 0.16)); max-width: 440px; } .ds-slip { --zz: 7px; background: #ffffff; padding: 30px 26px 28px; -webkit-mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) bottom / calc(2 * var(--zz)) 51% repeat-x, conic-gradient(from 135deg at top, #0000, #000 1deg 89deg, #0000 90deg) top / calc(2 * var(--zz)) 51% repeat-x; mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) bottom / calc(2 * var(--zz)) 51% repeat-x, conic-gradient(from 135deg at top, #0000, #000 1deg 89deg, #0000 90deg) top / calc(2 * var(--zz)) 51% repeat-x; transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-slip:hover { transform: translateX(-8px) rotate(-0.6deg); } .ds-slip h3 { margin: 0; font-family: 'Inter Variable', Inter, sans-serif; font-weight: 700; font-size: 30px; line-height: 1.1; letter-spacing: -0.03em; color: #19191e; } .ds-slip p { margin: 12px 0 0; font-family: 'Inter Variable', Inter, sans-serif; font-size: 17px; line-height: 1.55; color: #55555f; max-width: 40ch; }"
+    },
+    {
+      "name": "Share Stub",
+      "kind": "card",
+      "refersTo": "stub",
+      "description": "One person's torn-off share: chip and name, items in mono, dashed rule, amount.",
+      "html": "<div class=\"ds-stub-shadow\"><div class=\"ds-stub\"><div class=\"ds-stub-head\"><span class=\"ds-stub-chip\">MR</span>Marcus</div><ul><li><span>Carnitas bowl</span><span>14.00</span></li><li><span>Horchata</span><span>4.00</span></li></ul><p><span>Owes</span><strong>$23.24</strong></p></div></div>",
+      "css": ".ds-stub-shadow { filter: drop-shadow(0 2px 3px rgb(15 15 31 / 0.08)) drop-shadow(0 16px 22px rgb(22 105 122 / 0.16)); width: 220px; transform: rotate(2deg); } .ds-stub { background: #ffffff; padding: 24px 20px 22px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; color: #19191e; clip-path: polygon(0 0, 6.25% 7px, 12.5% 0, 18.75% 7px, 25% 0, 31.25% 7px, 37.5% 0, 43.75% 7px, 50% 0, 56.25% 7px, 62.5% 0, 68.75% 7px, 75% 0, 81.25% 7px, 87.5% 0, 93.75% 7px, 100% 0, 100% 100%, 93.75% calc(100% - 7px), 87.5% 100%, 81.25% calc(100% - 7px), 75% 100%, 68.75% calc(100% - 7px), 62.5% 100%, 56.25% calc(100% - 7px), 50% 100%, 43.75% calc(100% - 7px), 37.5% 100%, 31.25% calc(100% - 7px), 25% 100%, 18.75% calc(100% - 7px), 12.5% 100%, 6.25% calc(100% - 7px), 0 100%); } .ds-stub-head { display: flex; align-items: center; gap: 10px; font-family: 'Inter Variable', Inter, sans-serif; font-weight: 600; font-size: 16px; } .ds-stub-chip { display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 999px; background: #ebe3fb; color: #5b3fa3; font-size: 11px; } .ds-stub ul { list-style: none; margin: 16px 0 0; padding: 0; font-size: 13px; color: #55555f; } .ds-stub li { display: flex; justify-content: space-between; } .ds-stub p { margin: 16px 0 0; padding-top: 12px; border-top: 2px dashed #dedee4; display: flex; justify-content: space-between; align-items: baseline; } .ds-stub p span { font-family: 'Inter Variable', Inter, sans-serif; font-size: 12px; color: #55555f; } .ds-stub strong { font-size: 24px; font-weight: 600; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Claim Tag",
+      "kind": "custom",
+      "refersTo": "claim-tag",
+      "description": "Live feed pill announcing who claimed what.",
+      "html": "<div class=\"ds-claim-tag\"><span class=\"ds-claim-chip\">PK</span><span><b>Priya</b> claimed Horchata</span></div>",
+      "css": ".ds-claim-tag { display: flex; align-items: center; gap: 12px; width: max-content; max-width: 280px; background: #ffffff; padding: 8px 16px 8px 8px; border-radius: 999px; font-family: 'Inter Variable', Inter, sans-serif; font-size: 14px; color: #55555f; box-shadow: 0 1px 2px rgb(15 15 31 / 0.06), 0 8px 20px -8px rgb(22 105 122 / 0.25); } .ds-claim-tag b { color: #19191e; font-weight: 600; } .ds-claim-chip { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 999px; background: #dfe6fb; color: #2f4aa8; font-weight: 600; font-size: 13px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Split Receipt",
+    "overview": "The whole surface is a restaurant table seen from above: a pale teal tabletop, white thermal-receipt paper laid on it, and a teal pen that has annotated the paper with quick strokes. Content does not sit in cards; it is printed on slips of paper with torn zigzag edges, dashed rules between ledger blocks, and a dotted perforation where the paper is meant to tear. The signature move is that the paper behaves like paper: lines get claimed by friends' avatar chips, the long receipt tears into one stub per person, and slips tilt a fraction of a degree when they are the active one.\n\nDensity is low and calm around the paper and tight on it. Prose is set in Inter at generous sizes on the table; everything that is a bill (items, prices, totals, table metadata) is set in JetBrains Mono with tabular figures, the way a printer would. The wordmark PORTION in PortionTitle heads the receipt like a restaurant's name, and the Spicy Rice P mark is the only logo in the chrome.\n\nThe world is light only, by decision: white paper and line-art illustration on a pale ground. Tangerine is scarce and personal; it means \"you\" and \"the status\", and almost nothing else is orange.",
+    "keyCharacteristics": [
+      "Pale teal table ground (#e3f0f2) with white paper objects resting on it; no generic cards.",
+      "Torn zigzag edges, dashed rules and dotted perforations as the structural vocabulary.",
+      "Two-voice type: Inter for prose and controls, JetBrains Mono with tabular numerals for anything on the bill.",
+      "Teal ink (#16697a) for the wordmark, headlines, links and hand-drawn doodle strokes.",
+      "Tangerine reserved for the visitor's own claims, their share, the Coming soon status, and focus.",
+      "Friends are identified by pastel initial chips, never by photos."
+    ],
+    "rules": [
+      {
+        "name": "The It's-Yours Rule",
+        "body": "Tangerine and its soft tint mark what belongs to the visitor (their rows, their chip, their share) plus the single Coming soon status and the focus ring. Totals for everyone else stay graphite. If something orange does not belong to \"you\" or the status, it is wrong.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink-On-Table Rule",
+        "body": "Large type that sits directly on the table ground is teal ink; type on paper is graphite and slate. The color tells you whether you are reading the page or the bill.",
+        "section": "colors"
+      },
+      {
+        "name": "The Printer Rule",
+        "body": "Anything that is a line item, a price, a quantity, a date stamp or table metadata is set in JetBrains Mono with tabular numerals. Prose and controls never are.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Wordmark Rule",
+        "body": "PortionTitle appears once per page, as the receipt's name. It is never used for headlines.",
+        "section": "typography"
+      },
+      {
+        "name": "The Teal Light Rule",
+        "body": "The ambient layer of every shadow is tinted with ink (rgb 22 105 122), never neutral black. Hard offset shadows do not exist in this world.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do put content on paper with torn zigzag edges (9px teeth for the main receipt, 7px for slips) and drop-shadows on a wrapper so the shadow follows the teeth.",
+      "Do set every price, quantity, date and table line in JetBrains Mono with tabular numerals.",
+      "Do set headlines on the table in Inter 700 teal ink with tight tracking (-0.03em to -0.035em) and a ch-based max width.",
+      "Do keep tangerine for the visitor's own claims and share, the Coming soon status and the focus ring; use tangerine-text (#bf4810) whenever the accent is text.",
+      "Do tint ambient shadows with teal ink (rgb 22 105 122) and pair them with a tight neutral contact shadow.",
+      "Do separate ledger blocks with 2px dashed rule lines and mark tear lines with 2px dotted slate at 45%.",
+      "Do annotate with ink doodle strokes (4px, round caps) that point at something real on the page.",
+      "Do use the single strong ease-out curve and honor reduced motion with a finished, static state."
+    ],
+    "donts": [
+      "Don't introduce generic rounded cards for content; this world's container is a paper slip with torn edges.",
+      "Don't use tangerine for headlines, totals that are not the visitor's, large fills or decoration.",
+      "Don't put white text on tangerine; the on-accent color is near-black (#0f0f12).",
+      "Don't use PortionTitle for anything except the receipt's wordmark, or Spicy Rice for anything except the P mark.",
+      "Don't add a dark theme; the world is white paper and line art on a pale ground.",
+      "Don't use hard offset shadows or neutral grey ambient shadows.",
+      "Don't use photos or illustrated faces for friends; people are initial chips."
+    ]
+  }
+}

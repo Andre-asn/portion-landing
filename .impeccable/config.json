@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "createdAt": "2026-10-09T19:36:19.432Z",
+        "reason": "Portion's Figma design system (file psXZ9yd8UAuOKm6NXeSIZk) defines all app type styles in Inter; brand commitment, not a default reach"
+      }
+    ]
+  }
+}
