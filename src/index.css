@@ -387,3 +387,162 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-primary);
 }
+/* ------------------------------------------------------------------ */
+/* Landing page: the receipt world. Accent tokens come from the Portion
+   Figma design system; teal ink and the wordmark are the existing brand. */
+@theme {
+  --color-table: #f4f4f7;
+  --color-ink: #19191e;
+  --color-paper: #ffffff;
+  --color-graphite: #19191e;
+  --color-slate: #55555f;
+  --color-rule: #dedee4;
+  --color-tangerine: #ff7733;
+  --color-tangerine-press: #e85d1a;
+  --color-tangerine-text: #bf4810;
+  --color-tangerine-soft: #fff4ec;
+  --color-on-tangerine: #0f0f12;
+  --font-sans: "Inter Variable", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --font-wordmark: "PortionTitle", "Spicy Rice", system-ui, sans-serif;
+  --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.landing ::selection { background: var(--color-tangerine-soft); color: var(--color-graphite); }
+.landing :focus-visible { outline: 3px solid var(--color-tangerine); outline-offset: 3px; border-radius: 8px; }
+.landing { caret-color: var(--color-tangerine); -webkit-font-smoothing: antialiased; }
+
+.skip-link {
+  position: absolute; left: 16px; top: -48px; z-index: 50;
+  background: var(--color-graphite); color: #fff; padding: 10px 16px; border-radius: 999px;
+  font-weight: 600; transition: top 160ms var(--ease-out-strong);
+}
+.skip-link:focus { top: 12px; }
+
+/* Receipt paper: zigzag torn edges top and bottom, shadow lives on the wrapper
+   because the mask would cut it off. */
+.paper {
+  background: var(--color-paper);
+  --zz: 9px;
+  mask:
+    conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) bottom / calc(2 * var(--zz)) 51% repeat-x,
+    conic-gradient(from 135deg at top, #0000, #000 1deg 89deg, #0000 90deg) top / calc(2 * var(--zz)) 51% repeat-x;
+}
+.paper-shadow { filter: drop-shadow(0 2px 3px rgb(15 15 31 / 0.08)) drop-shadow(0 22px 28px rgb(15 15 31 / 0.18)); }
+
+.receipt-row {
+  font: inherit;
+  transition: background-color 200ms ease, transform 160ms var(--ease-out-strong);
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
+.receipt-row[data-mine] { background: var(--color-tangerine-soft); }
+.receipt-row:active { transform: scale(0.985); }
+@media (hover: hover) and (pointer: fine) {
+  .receipt-row:not([data-mine]):hover { background: #f4f4f7; }
+}
+
+.doodle { stroke: var(--color-tangerine); stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+
+.status-pill, .btn-secondary {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  height: 52px; padding: 0 22px; border-radius: 999px; font-weight: 600; font-size: 16px; white-space: nowrap;
+}
+.status-pill { background: var(--color-tangerine); color: var(--color-on-tangerine); }
+.btn-secondary {
+  background: var(--color-paper); color: var(--color-ink); box-shadow: 0 0 0 1px var(--color-rule);
+  transition: background-color 160ms ease, transform 160ms var(--ease-out-strong);
+}
+.btn-secondary:active { transform: scale(0.97); }
+.btn-arrow { transition: transform 200ms var(--ease-out-strong); }
+@media (hover: hover) and (pointer: fine) {
+  .btn-secondary:hover { background: #eaeaee; }
+  .btn-secondary:hover .btn-arrow, .latest-post:hover .btn-arrow { transform: translateX(3px); }
+}
+
+.nav-link {
+  color: var(--color-ink); font-weight: 600; font-size: 15px;
+  text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 6px; text-decoration-thickness: 2px;
+  transition: text-decoration-color 160ms ease;
+}
+.nav-link:hover { text-decoration-color: var(--color-tangerine); }
+
+.landing .logo-p { filter: none; color: var(--color-tangerine); }
+
+.claim-tag {
+  display: flex; align-items: center; gap: 12px; width: max-content; max-width: 280px;
+  background: var(--color-paper); padding: 8px 16px 8px 8px; border-radius: 999px;
+  font-size: 14px; color: var(--color-slate);
+  box-shadow: 0 1px 2px rgb(15 15 31 / 0.06), 0 8px 20px -8px rgb(15 15 31 / 0.25);
+}
+
+.stub { width: 100%; background: var(--color-paper); padding: 24px 20px 22px; font-family: var(--font-mono); font-size: 14px; }
+@media (min-width: 768px) { .stub { width: 220px; } }
+.stub-open { background: var(--color-table); }
+.stub-shadow { filter: drop-shadow(0 2px 3px rgb(15 15 31 / 0.08)) drop-shadow(0 16px 22px rgb(15 15 31 / 0.16)); }
+
+.phone-frame {
+  padding: 9px; border-radius: 43px; background: var(--color-graphite);
+  box-shadow: 0 2px 6px rgb(15 15 31 / 0.1), 0 30px 60px -18px rgb(15 15 31 / 0.4);
+}
+
+.latest-post { transition: transform 200ms var(--ease-out-strong); }
+.latest-post:active { transform: scale(0.99); }
+@media (hover: hover) and (pointer: fine) {
+  .latest-post:hover { transform: translateY(-2px) rotate(-0.4deg); }
+}
+
+/* A torn-off slip of the same receipt paper. */
+.step-slip {
+  background: var(--color-paper); padding: 30px 26px 28px;
+  --zz: 7px;
+  mask:
+    conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) bottom / calc(2 * var(--zz)) 51% repeat-x,
+    conic-gradient(from 135deg at top, #0000, #000 1deg 89deg, #0000 90deg) top / calc(2 * var(--zz)) 51% repeat-x;
+  transition: transform 300ms var(--ease-out-strong);
+}
+.step-title { color: var(--color-graphite); transition: color 200ms ease; }
+@media (min-width: 768px) {
+  .step-slip:not([data-active]) .step-title { color: var(--color-slate); }
+  .step-slip[data-active] { transform: translateX(-8px) rotate(-0.6deg); }
+}
+
+/* Perforated foot of the hero receipt. */
+.perforation { display: flex; align-items: center; gap: 10px; color: var(--color-slate); }
+.perforation::after { content: ""; flex: 1; border-top: 2px dotted rgb(85 85 95 / 0.45); }
+
+@media (max-width: 1023px) {
+  .claim-feed > li + li { display: none; }
+}
+
+/* Browser surfaces in the new palette (later rules win over the legacy ones above). */
+html { scrollbar-color: rgb(15 15 31 / 0.6) var(--color-table); }
+::-webkit-scrollbar-track { background: var(--color-table); }
+::-webkit-scrollbar-thumb { background: rgb(15 15 31 / 0.6); }
+::-webkit-scrollbar-thumb:hover { background: var(--color-ink); }
+
+@media (prefers-reduced-motion: reduce) {
+  .landing *, .landing *::before, .landing *::after { transition-duration: 1ms !important; }
+}
+
+/* Hero printer: the receipt feeds out from under the slot lip. */
+.printer {
+  background: var(--color-graphite);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.08), 0 2px 4px rgb(15 15 31 / 0.12), 0 18px 32px -14px rgb(15 15 31 / 0.4);
+}
+.printer-display { background: #0f0f12; border-radius: 10px; padding: 6px 12px; box-shadow: inset 0 1px 3px rgb(0 0 0 / 0.6); }
+.printer-slot { background: #0f0f12; box-shadow: 0 6px 10px -6px rgb(15 15 31 / 0.5); }
+.printer-led { width: 8px; height: 8px; border-radius: 999px; background: #3a3a44; flex-shrink: 0; transition: background-color 300ms ease; }
+.printer-led.is-printing { background: var(--color-tangerine); animation: led-blink 600ms steps(2, jump-none) infinite; }
+@keyframes led-blink { 50% { opacity: 0.35; } }
+@media (prefers-reduced-motion: reduce) { .printer-led.is-printing { animation: none; } }
+
+.nav-link-light { color: #fff; }
+
+/* Section grounds, all from the Figma app palette. */
+.section-dark .step-slip:not([data-active]) .step-title { color: var(--color-slate); }
+.section-dark .phone-frame { background: #000; box-shadow: 0 0 0 1px rgb(255 255 255 / 0.14), 0 30px 60px -18px rgb(0 0 0 / 0.6); }
+.section-dark .stub-shadow { filter: drop-shadow(0 16px 22px rgb(0 0 0 / 0.35)); }
+.section-accent .doodle { stroke: var(--color-graphite); }
+.section-accent .stub-shadow { filter: drop-shadow(0 2px 3px rgb(15 15 31 / 0.1)) drop-shadow(0 16px 22px rgb(120 40 0 / 0.25)); }
+.section-accent ::selection { background: var(--color-graphite); color: #fff; }

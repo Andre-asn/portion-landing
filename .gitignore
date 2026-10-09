@@ -23,3 +23,11 @@ dist-ssr
 *.sln
 *.sw?
 .env
+.claude
+skills-lock.json
+.impeccable/review/
+.impeccable/mocks/
+.impeccable/questions/
+.impeccable/hook.cache.json
+.impeccable/brief-body.md
+tsconfig.tsbuildinfo
