@@ -21,6 +21,7 @@ export const blogPosts: BlogPost[] = [
 		date: "2025-09-14",
 		content: "On our way to completing our most exciting feature, intelligent receipt parsing powered by Mistral AI! You can now simply photograph any restaurant receipt and watch as our system automatically extracts every item, quantity, and price. The AI intelligently filters out subtotals and duplicates, leaving only the actual food and drinks you can split. You can select partial quantities (want just 1 of 3 sodas? No problem!), edit any OCR mistakes, and watch your running total update in real-time. This eliminates the tedious manual entry that made bill splitting apps frustrating to use.",
 		image: "/blog/Screenshot 2025-09-14 173351.png",
+		imageAlt: "Upload Receipt screen with a photo of a receipt above the items read from it, each with a checkbox, quantity selector and price",
 	},
     {
 		id: 5,
@@ -29,7 +30,9 @@ export const blogPosts: BlogPost[] = [
 		date: "2025-08-19",
 		content: "I've successfully populated our core social features with real user data! The Buddies screen now displays your actual friend connections with profile pictures, names, and online status. You can search through your buddy list, send friend requests, and manage your social network seamlessly. Meanwhile, our Tables screen shows live, active dining tables with real-time updates on who's joined, what items are available, and which portions have been claimed. This brings the app to life with authentic social interactions - no more placeholder data or mock scenarios. You can now see your real friends' avatars, track actual table progress, and experience the true collaborative nature of Portion. The foundation is set for meaningful social dining experiences!",
 		image: "/blog/Screenshot 2025-09-14 172957.png",
+		imageAlt: "Tables screen with a search bar and a list of dining tables, each showing a total and date",
         image2: "/blog/Screenshot 2025-09-14 173048.png",
+		image2Alt: "My Buddies screen with a search bar and one friend listed, name redacted",
 	},
 	{
 		id: 4,
@@ -38,6 +41,7 @@ export const blogPosts: BlogPost[] = [
 		date: "2025-08-04",
 		content: "While designing the UI, I really took a lot of inspiration from Venmo and CashApp - I really liked their design and it almost fits what I'm trying to achieve. However, after multiple iterations, I realized how cluttered my screens were with information that wasn't necessarily useful, like having a 'money spent' widget on the home screen. I cut out a lot of that, and completely changed how the app looks, and the screens that are accessible. Feels a lot more minimal and intuitive now compared to before. Here are some early screenshots, different from what I have on the landing page at the moment.",
 		image: "/blog/Screenshot 2025-09-14 172423.png",
+		imageAlt: "Early home screen with a greeting, Recent Tables list filtered by All, Active and Completed, and a bottom bar",
 	},
 	{
 		id: 3,

@@ -546,3 +546,33 @@ html { scrollbar-color: rgb(15 15 31 / 0.6) var(--color-table); }
 .section-accent .doodle { stroke: var(--color-graphite); }
 .section-accent .stub-shadow { filter: drop-shadow(0 2px 3px rgb(15 15 31 / 0.1)) drop-shadow(0 16px 22px rgb(120 40 0 / 0.25)); }
 .section-accent ::selection { background: var(--color-graphite); color: #fff; }
+
+/* Dev blog */
+.nav-link[aria-current="page"] { text-decoration-color: var(--color-tangerine); }
+.log-line {
+  display: flex; gap: 10px; padding: 8px; border-radius: 8px; line-height: 1.35; color: var(--color-graphite);
+  transition: background-color 200ms ease;
+}
+.log-line[aria-current] { background: var(--color-tangerine-soft); color: var(--color-tangerine-text); font-weight: 600; }
+.log-line[aria-current] span:first-child { color: var(--color-tangerine-text); }
+@media (hover: hover) and (pointer: fine) {
+  .log-line:not([aria-current]):hover { background: var(--color-table); }
+}
+.newest-tag {
+  display: inline-flex; align-items: center; height: 24px; padding: 0 10px; border-radius: 999px;
+  background: var(--color-tangerine); color: var(--color-on-tangerine);
+  font-family: var(--font-sans); font-weight: 600; font-size: 12px; letter-spacing: 0;
+}
+.btn-dark {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  height: 52px; padding: 0 22px; border-radius: 999px; font-weight: 600; font-size: 16px; white-space: nowrap;
+  background: var(--color-graphite); color: #fff;
+  transition: background-color 160ms ease, transform 160ms var(--ease-out-strong);
+}
+.btn-dark:active { transform: scale(0.97); }
+@media (hover: hover) and (pointer: fine) {
+  .btn-dark:hover { background: #2c2c33; }
+  .btn-dark:hover .btn-arrow { transform: translateX(3px); }
+}
+html:has(.blog-page) { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html:has(.blog-page) { scroll-behavior: auto; } }
